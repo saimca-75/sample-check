@@ -1,0 +1,47 @@
+<html>
+<head>LOGIN FORM<title>
+login page</title>
+<script>
+function validate()
+{
+if(document.myform.user.value=="")
+{
+alert("please Enter Your Name");
+documnet.myform.user.focus();
+return false;
+}
+if(document.myform.pass.value=="")
+{
+alert("please Enter Your Password")
+document.myform.pass.focus();
+return false;
+}
+if(document.myform.mob.value==""||document.myform.mob.value.length!=10)
+{
+alert("please Enter your Mobile Number");
+document.myform.mob.focus();
+return false;
+
+}
+return true;
+}
+</script>
+<style>
+td[name="pass"]
+{
+background-color:red;
+}
+</style>
+
+</head>
+<body>
+<form name="myform" onsubmit="return(validate())">
+<table>
+<tr><td>Name :</td><td><input type="text" name="user"></td></tr><br>
+<tr><td>Password :</td><td><input type="password" name="pass"></td></tr>
+<tr><td>Mobile Number :</td><td><input type="text" name="mob"></td></tr>
+<tr><td><input type="submit" value="submit" ></td></tr>
+</table>
+</form>
+</body>
+</html>
